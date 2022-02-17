@@ -24,11 +24,15 @@ html {
 }
 
 body {
+  /* zanuli all height */
   height: 100vh;
   min-width: 320px;
   font-family: Roboto, sans-serif;
   background-color: black;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 img {
   /* чтрбы кнопка не выпадала из свроего родителя */
@@ -53,4 +57,114 @@ h2,
 h3,
 p {
   margin: 0;
+}
+.header {
+  padding-top: 9px;
+  padding-bottom: 9px;
+  position: relative;
+}
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.navigation__list {
+  display: flex;
+  text-transform: uppercase;
+  margin-right: 14px;
+}
+.navigation__link {
+  padding: 7px 14px;
+  display: block;
+}
+.header__hashtag {
+  margin-right: 70px;
+}
+.navigation__link_active {
+  background-color: #e90000;
+}
+.social {
+  display: flex;
+  gap: 20px;
+}
+.social__link {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+.social__link_fb {
+  background-image: url(../img/GroupFb.svg);
+}
+.social__link_twitter {
+  background-image: url(../img/GroupTw.svg);
+}
+.social__link_inst {
+  background-image: url(../img/GroupIns.svg);
+}
+.burger {
+  display: none;
+}
+.mute {
+  position: absolute;
+  right: 100px;
+  /* sdvigaem naverh */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 24px;
+  /* vse vipadaushie elementy skruvaem */
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 30px;
+}
+.mute__checkbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  /* chtoby clikat */
+  z-index: 3;
+}
+.mute__label:before,
+.mute__label:after {
+  /* bez svoistva content after et before ne otobragautsa */
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  height: 22px;
+  width: 22px;
+  display: block;
+  border-radius: 50%;
+  background-color: #e90000;
+  box-shadow: 0px 1px 1px rgba(69, 2, 2, 0.3);
+  /* chtoby perekluchateli katalis */
+  transition: left 0.3s ease-in-out, right 0.3s ease-in-out;
+}
+.mute__label:before {
+}
+.mute__label:after {
+  right: -22px;
+  left: auto;
+}
+.mute__checkbox:checked + .mute__label:before {
+  left: -22px;
+}
+.mute__checkbox:checked + .mute__label:after {
+  right: 1px;
+}
+.navigation__close {
+  display: none;
+}
+.main {
+  /* razreshaem rastagivatsa elementy na vse svobodnoe prostranstvo */
+  flex-grow: 1;
 }
