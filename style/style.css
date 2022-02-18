@@ -148,12 +148,16 @@ p {
   box-shadow: 0px 1px 1px rgba(69, 2, 2, 0.3);
   /* chtoby perekluchateli katalis */
   transition: left 0.3s ease-in-out, right 0.3s ease-in-out;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .mute__label:before {
+  background-image: url(../img/audio_off.svg);
 }
 .mute__label:after {
   right: -22px;
   left: auto;
+  background-image: url(../img/audio_on.svg);
 }
 .mute__checkbox:checked + .mute__label:before {
   left: -22px;
@@ -167,4 +171,32 @@ p {
 .main {
   /* razreshaem rastagivatsa elementy na vse svobodnoe prostranstvo */
   flex-grow: 1;
+}
+.main_index {
+  display: flex;
+  align-items: center;
+  background-image: url(../img/bg.jpg);
+  background-position: top;
+  background-size: cover;
+  padding-left: 180px;
+}
+
+.footer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 9px;
+  line-height: 11px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.footer__links {
+  display: flex;
+  gap: 21px;
+  margin-bottom: 6px;
+}
+.footer__copyright {
+  color: #6a6a6a;
 }
