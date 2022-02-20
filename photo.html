@@ -7,9 +7,12 @@
 
   <link rel="preload" href="fonts/roboto-v29-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/roboto-v29-latin_cyrillic-500.woff2" as="font" type="font/woff2" crossorigin>
-  
   <link rel="stylesheet" href="style/normalize.css">
+  <link rel="stylesheet" href="style/swiper-bundle.min.css" />
   <link rel="stylesheet" href="style/style.css">
+
+  <script defer src="js/swiper-bundle.min.js"></script>
+  <script defer src="js/script.js"></script>
   <title>Batman 2022</title>
 </head>
 <body>
@@ -49,18 +52,34 @@
   </header>
 
   <main class="main main_slider">
-    <div class="slider-main">
-      <ul class="slider-main__list">
-        <li class="slider-main__item">
+    <div class="slider-main swiper">
+      <ul class="slider-main__list swiper-wrapper">
+        <li class="slider-main__item swiper-slide">
           <img src="photo/photo01.jpg" alt="photo" class="slider-main__img">
         </li>
-        <li class="slider-main__item">
+        <li class="slider-main__item swiper-slide">
           <img src="photo/photo02.jpg" alt="photo" class="slider-main__img">
         </li>
-        <li class="slider-main__item">
+        <li class="slider-main__item swiper-slide">
           <img src="photo/photo03.jpg" alt="photo" class="slider-main__img">
         </li>
       </ul>
+    </div>
+    <div class="pagination">
+      <button class="pagination__array"></button>
+      <div class="slider-thumbs swiper">
+        <ul class="slider-thumbs__list swiper-wrapper">
+          <li class="slider-thumbs__item swiper-slide">
+            <img src="photo/photo01-thumbs.jpg" alt="preview photo" class="slider-thumbs__img" width="260" height="100">
+          </li>
+          <li class="slider-thumbs__item swiper-slide">
+            <img src="photo/photo02-thumbs.jpg" alt="preview photo" class="slider-thumbs__img" width="260" height="100">
+          </li>
+          <li class="slider-thumbs__item swiper-slide">
+            <img src="photo/photo03-thumbs.jpg" alt="preview photo" class="slider-thumbs__img" width="260" height="100">
+          </li>
+        </ul>
+      </div>
     </div>
   </main>
 
