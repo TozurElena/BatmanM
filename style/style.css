@@ -59,6 +59,7 @@ p {
   margin: 0;
 }
 .header {
+  height: 50px;
   padding-top: 9px;
   padding-bottom: 9px;
   position: relative;
@@ -174,6 +175,7 @@ p {
 .main {
   /* razreshaem rastagivatsa elementy na vse svobodnoe prostranstvo */
   flex-grow: 1;
+  position: relative;
 }
 .logo {
   animation: zoomIn 1s;
@@ -193,6 +195,9 @@ p {
 }
 
 .footer {
+  position: relative;
+  z-index: 500;
+  height: 70px;
   padding-top: 10px;
   padding-bottom: 10px;
   display: flex;
@@ -210,6 +215,46 @@ p {
 }
 .footer__copyright {
   color: #6a6a6a;
+}
+.slider-main {
+  height: 100%;
+}
+.slider-main__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pagination {
+  /* z-index d.b < chem u footer */
+  z-index: 400;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 15px;
+  background-color: black;
+  min-height: 144px;
+  padding-top: 12px;
+}
+.pagination__arrow {
+  display: block;
+  margin: 0 auto 20px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-top: 6px solid #fff;
+  background-color: transparent;
+  transition: border-color 0.3s ease-in-out;
+}
+.pagination__arrow:hover {
+  border-top-color: #e90000;
+}
+.slider-thumbs {
+  max-width: 820px;
 }
 @media (max-width: 1024px) {
   .mute {
@@ -315,7 +360,14 @@ p {
     width: 125px;
   }
   .footer {
+    height: 50px;
     font-size: 6px;
     line-height: 7px;
+  }
+  .pagination__arrow {
+    margin-bottom: 6px;
+  }
+  .pagination {
+    min-height: 80px;
   }
 }
