@@ -216,6 +216,9 @@ p {
 .footer__copyright {
   color: #6a6a6a;
 }
+.main_slider {
+  height: calc(100%-120px);
+}
 .slider-main {
   height: 100%;
 }
@@ -255,6 +258,12 @@ p {
 }
 .slider-thumbs {
   max-width: 820px;
+}
+.slider-main__video {
+  height: 100%;
+  width: 100%;
+  /* chtoby video ne iskagalos */
+  object-fit: cover;
 }
 @media (max-width: 1024px) {
   .mute {
